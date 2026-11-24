@@ -1,1 +1,201 @@
-Hanagi
+<!doctype html>
+<html lang="ja">
+    <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width,initial-scale=1" name="viewport">
+      <meta content="ManaRingは、マウスカーソルの周囲に現れるWindows向けリング型ランチャーです。" name="description">
+      <title>ManaRing | リング型Windowsランチャー</title>
+      <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <a class="brand" href="#top">
+              <span class="brand-mark">✦</span>ManaRing
+            </a>
+            <nav aria-label="メインナビゲーション">
+              <a href="#features">特徴</a>
+              <a href="#controls">操作方法</a>
+              <a href="#requirements">動作環境</a>
+              <a class="nav-cta" href="#purchase">購入案内</a>
+            </nav>
+        </header>
+        <main id="top">
+            <section class="hero">
+                <div class="hero-copy">
+                    <span class="eyebrow">
+                      <span class="dot"></span>
+                      WINDOWS RING LAUNCHER · VERSION 1.0.0
+                    </span>
+                    <h1>いつもの操作に<br><em>ひとつの輪を</em></h1>
+                    <p>ManaRingは、マウスカーソルの周囲にメニューを表示するWindows向けランチャーです。<br>
+                       登録したアプリやフォルダーをリングから選んで開けます。</p>
+                    <div class="hero-actions">
+                      <a class="button primary" href="#features">ManaRingを知る<span>↗</span></a>
+                      <a class="button secondary" href="#purchase">購入について →</a>
+                    </div>
+                    <div class="hero-note">Windows 11 対応　·　.NET Framework 4.7.2</div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-label">INTERACTIVE PREVIEW<span>●</span>
+                    </div>
+                    <div aria-label="リングメニューの操作プレビュー" class="ring-stage" tabindex="0">
+                        <div class="orbit" id="orbit"></div>
+                        <div class="ring-center">M</div>
+                        <div class="selection-frame"><i></i><i></i><i></i><i></i></div>
+                    </div>
+                    <div class="preview-bottom">
+                        <div class="page-controls">
+                          <button aria-label="前のページ" id="prev-page" type="button">‹</button>
+                          <span aria-live="polite" id="page-indicator">ページ 1 / 3</span>
+                          <button aria-label="次のページ" id="next-page" type="button">›</button>
+                        </div>
+                        <div class="visual-caption">ホイール：リング回転 ／ 右ボタン＋ホイール：ページ切り替え<br>
+                          <small>下の矢印ボタンでもページを切り替えられます。※ 操作イメージです</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section feature-section" id="features">
+                <div class="section-heading">
+                  <span class="kicker">01 / FEATURES</span>
+                  <h2>ManaRingでできること</h2>
+                  <p>リングメニューの表示方法や、アイコンの選択方法を設定できます。</p>
+                </div>
+                <div class="features">
+                    <article class="feature">
+                        <span class="feature-number">01</span>
+                        <div class="feature-symbol">◎</div>
+                        <h3>カーソルの周りに表示</h3>
+                        <p>リングメニューをマウスカーソルの周囲に表示。使いたい場所で、そのままアクセスできます。</p>
+                    </article>
+                    <article class="feature">
+                        <span class="feature-number">02</span>
+                        <div class="feature-symbol">↗</div>
+                        <h3>ホットキーなどで呼び出す</h3>
+                        <p>ホットキー、時計回り・反時計回りのジェスチャー、画面端ダブルクリックに対応。</p>
+                    </article>
+                    <article class="feature">
+                        <span class="feature-number">03</span>
+                        <div class="feature-symbol">◌</div>
+                        <h3>リングを回して選ぶ</h3>
+                        <p>マウスホイールや矢印キーでアイコンを選択。アイコンのクリックでも選択位置まで回転します。</p>
+                    </article>
+                    <article class="feature">
+                        <span class="feature-number">04</span>
+                        <div class="feature-symbol">▦</div>
+                        <h3>複数ページで整理</h3>
+                        <p>アプリやフォルダーをページごとに整理。各アイテムには好きな画像をアイコンとして設定できます。</p>
+                    </article>
+                </div>
+            </section>
+            <section class="section customization-section" id="customize">
+                <div class="section-heading">
+                  <span class="kicker">02 / CUSTOMIZE</span>
+                  <h2>アイコンを好きな画像に変更</h2>
+                  <p>登録したアイテムごとに画像を指定できます。画像を指定しない場合は、起動するファイルのアイコンを使用します。</p>
+                </div>
+                <div aria-label="アイコンのカスタマイズ例" class="custom-icons">
+                    <div>🎨<small>画像の例</small></div>
+                    <div>📁<small>フォルダー</small></div>
+                    <div>🎮<small>ゲーム</small></div>
+                    <div>🎵<small>音楽</small></div>
+                    <div>🖼️<small>写真</small></div>
+                </div>
+                <p class="custom-note">※ ここに表示しているアイコンは説明用の例です。実際にはPNG、ICO、JPEGなどの画像ファイルを指定できます。</p>
+            </section>
+            <section class="section video-section" id="demo">
+                <div class="section-heading">
+                  <span class="kicker">03 / VIDEO</span>
+                  <h2>動作動画</h2>
+                  <p>リングの表示や回転、ページ切り替えなどの操作をご覧いただけます。</p>
+                </div>
+                <video class="demo-video" controls playsinline preload="metadata">
+                  <source src="media/manaring-demo.mp4" type="video/mp4">お使いのブラウザーでは動画を再生できません。
+                </video>
+            </section>
+            <section class="section controls-section" id="controls">
+                <div class="section-heading">
+                  <span class="kicker">04 / HOW TO USE</span>
+                  <h2>基本的な操作</h2>
+                  <p>マウスやキーボードからリングを操作できます。</p>
+                </div>
+                <div class="controls-grid">
+                    <div class="control-row">
+                      <span>リングを表示</span>
+                      <strong>Ctrl + Alt + Space</strong>
+                      <small>初期ホットキー</small>
+                    </div>
+                    <div class="control-row">
+                      <span>アイコンを選択</span>
+                      <strong>マウスホイール / ← →</strong>
+                      <small>リングを回転</small>
+                    </div>
+                    <div class="control-row">
+                      <span>アイテムを起動</span>
+                      <strong>Enter / 左クリック</strong>
+                      <small>選択中のアイテムを実行</small>
+                    </div>
+                    <div class="control-row">
+                      <span>ページを切り替え</span>
+                      <strong>↑ ↓ / Space</strong>
+                      <small>右ボタン＋ホイールも対応</small>
+                    </div>
+                    <div class="control-row">
+                      <span>リングを閉じる</span>
+                      <strong>Esc</strong>
+                      <small>中央アイコンのクリックでも閉じる</small>
+                    </div>
+                </div>
+                <p class="controls-footnote">操作方法や設定項目の詳細は、製品付属の取扱説明書をご確認ください。</p>
+            </section>
+            <section class="section requirements-section" id="requirements">
+                <div>
+                  <span class="kicker">05 / REQUIREMENTS</span>
+                  <h2>動作環境</h2>
+                  <p>ZIPを展開して実行するだけ。インストーラーは必要ありません。</p>
+                </div>
+                <dl class="specs">
+                    <div>
+                      <dt>対応OS</dt>
+                      <dd>Windows 11</dd>
+                    </div>
+                    <div>
+                      <dt>実行環境</dt>
+                      <dd>.NET Framework 4.7.2以降の互換バージョン</dd>
+                    </div>
+                    <div>
+                      <dt>入力機器</dt>
+                      <dd>マウス・キーボード</dd>
+                    </div>
+                    <div>
+                      <dt>配布形式</dt>
+                      <dd>ZIPファイル</dd>
+                    </div>
+                </dl>
+            </section>
+            <section class="purchase-section" id="purchase">
+              <span class="kicker">06 / GET MANARING</span>
+              <h2>ManaRingの購入案内</h2>
+              <p>ManaRing 1.0.0 完全版はBOOTHで購入できます。</p>
+              <a class="button primary"
+                 href="https://booth.pm/ja/items/REPLACE_WITH_ITEM_ID"
+                 target="_blank"
+                 rel="noopener noreferrer">BOOTHで購入する
+                <span>↗</span>
+              </a>
+              <small>購入・ダウンロードはBOOTHの販売ページから行えます。</small>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <strong>✦ ManaRing</strong>
+                <p>Windows Ring Launcher</p>
+            </div>
+            <div class="footer-right">
+              <span>Developed by Hanagi</span>
+              <span>Copyright © 2026 Hanagi. All rights reserved.</span>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
